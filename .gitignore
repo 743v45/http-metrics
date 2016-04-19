@@ -1,10 +1,2 @@
-*~
-*.pyc
-.node
-.pm2
-conf/config.js
-conf/config.test.js
 coverage
-fabfile.py
 node_modules
-run
