@@ -4,16 +4,27 @@
   "description": "The times of the HTTP/HTTPS request process",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "gulp"
+    "test": "make test",
+    "lint": "make lint",
+    "test-cov": "make test-cov"
   },
   "author": "taevas <taevas@qq.com> (taevas.space)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zyvas/node-connect-time.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyvas/node-connect-time/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^2.0.0",
-    "jshint": "^2.9.1"
+    "istanbul": "^0.4.3",
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "should": "^8.3.1"
   }
 }
