@@ -14,6 +14,18 @@
     "type": "git",
     "url": "https://github.com/zyvas/node-connect-time.git"
   },
+  "keywords": [
+    "namelookup",
+    "time_namelookup",
+    "connect",
+    "time_connect",
+    "SSL",
+    "time_appconnect",
+    "TTFB",
+    "time_starttransfer",
+    "download_time",
+    "time_total"
+  ],
   "bugs": {
     "url": "https://github.com/zyvas/node-connect-time/issues"
   },
