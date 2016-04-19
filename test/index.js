@@ -1,6 +1,6 @@
 'use strict';
-var request = require('../index').request;
-var should = require('should');
+const request = require('../index').request;
+const should = require('should');
 
 describe('index.js', function() {
   context('request', function() {
@@ -10,10 +10,10 @@ describe('index.js', function() {
       }, function(err, data) {
         should.ifError(err);
         should.exist(data);
-        should.equal(data.appconnect, 0);
-        should.notEqual(data.namelookup, 0);
-        should.notEqual(data.starttranster, 0);
-        should.notEqual(data.total_time, 0);
+        should.equal(data.time_appconnect, 0);
+        should.notEqual(data.time_namelookup, 0);
+        should.notEqual(data.time_starttransfer, 0);
+        should.notEqual(data.time_total, 0);
         should.notEqual(data.time_connect, 0);
         return done();
       });
@@ -25,10 +25,10 @@ describe('index.js', function() {
       }, true, function(err, data) {
         should.ifError(err);
         should.exist(data);
-        should.notEqual(data.appconnect, 0);
-        should.notEqual(data.namelookup, 0);
-        should.notEqual(data.starttranster, 0);
-        should.notEqual(data.total_time, 0);
+        should.notEqual(data.time_appconnect, 0);
+        should.notEqual(data.time_namelookup, 0);
+        should.notEqual(data.time_starttransfer, 0);
+        should.notEqual(data.time_total, 0);
         should.notEqual(data.time_connect, 0);
         done();
       });
@@ -49,10 +49,10 @@ describe('index.js', function() {
       }, function(err, data) {
         should.ifError(err);
         should.exist(data);
-        should.equal(data.appconnect, 0);
-        should.equal(data.namelookup, 0);
-        should.notEqual(data.starttranster, 0);
-        should.notEqual(data.total_time, 0);
+        should.equal(data.time_appconnect, 0);
+        should.equal(data.time_namelookup, 0);
+        should.notEqual(data.time_starttransfer, 0);
+        should.notEqual(data.time_total, 0);
         should.notEqual(data.time_connect, 0);
         return done();
       });
