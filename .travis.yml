@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "4.1"
+  - "5.8"
+
+install:
+  - npm install
+
+script:
+  - make test
+  - make lint
+
+after_script:
+  - make clean
+
+sudo: false

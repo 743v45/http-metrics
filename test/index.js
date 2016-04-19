@@ -5,6 +5,7 @@ const should = require('should');
 describe('index.js', function() {
   context('request', function() {
     it('should return result when having a HTTP request', function(done) {
+      this.timeout(10000);
       request({
         host: 'www.sina.com.cn'
       }, function(err, data) {
@@ -20,6 +21,7 @@ describe('index.js', function() {
     });
 
     it('should return result when having a HTTPS request', function(done) {
+      this.timeout(10000);
       request({
         host: 'www.baidu.com'
       }, true, function(err, data) {
@@ -35,8 +37,9 @@ describe('index.js', function() {
     });
 
     it('should return result when having a HTTPS request and host is IP without certificates', function(done) {
+      this.timeout(10000);
       request({
-        host: '220.181.57.217' // 百度 IP
+        host: '192.30.252.120' // github IP
       }, true, function(err, data) {
         should.exist(err);
         done();
@@ -44,6 +47,7 @@ describe('index.js', function() {
     });
 
     it('should return result when having a HTTP request and host is IP', function(done) {
+      this.timeout(10000);
       request({
         host: '61.172.201.194' // 新浪 IP
       }, function(err, data) {
