@@ -1,0 +1,19 @@
+{
+  "name": "node-connect-time",
+  "version": "0.0.1",
+  "description": "The times of the HTTP/HTTPS request process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gulp"
+  },
+  "author": "taevas <taevas@qq.com> (taevas.space)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.9.1"
+  }
+}
