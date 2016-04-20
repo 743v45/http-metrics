@@ -40,7 +40,6 @@ q.request({
 });
 /**
  * { time_namelookup: 0.012,
- *   time_starttranster: 0,
  *   time_total: 0.036,
  *   time_appconnect: 0,
  *   time_connect: 0.018,
