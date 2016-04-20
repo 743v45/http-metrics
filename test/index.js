@@ -40,7 +40,7 @@ describe('index.js', function() {
       this.timeout(10000);
       request({
         host: '192.30.252.120' // github IP
-      }, true, function(err, data) {
+      }, true, function(err) {
         should.exist(err);
         done();
       });
