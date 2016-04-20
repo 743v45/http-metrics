@@ -1,7 +1,8 @@
 # node-connect-time
 
 [![Build Status](https://travis-ci.org/zyvas/node-connect-time.svg?branch=develop)](https://travis-ci.org/zyvas/node-connect-time)
-
+[![Dependency Status](https://david-dm.org/zyvas/node-connect-time.svg)](https://david-dm.org/zyvas/node-connect-time)
+[![devDependency Status](https://david-dm.org/zyvas/node-connect-time/dev-status.svg?style=flat-square)](https://david-dm.org/zyvas/node-connect-time#info=devDependencies)
 
 Make HTTP/HTTPS display information on callback after a completed transfer.
 
