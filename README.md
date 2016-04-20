@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/zyvas/node-connect-time.svg?branch=develop)](https://travis-ci.org/zyvas/node-connect-time)
 [![Dependency Status](https://david-dm.org/zyvas/node-connect-time.svg)](https://david-dm.org/zyvas/node-connect-time)
 [![devDependency Status](https://david-dm.org/zyvas/node-connect-time/dev-status.svg?style=flat-square)](https://david-dm.org/zyvas/node-connect-time#info=devDependencies)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/38c84326ca9c44df89a9c9e1cbe44bd2)](https://www.codacy.com/app/i_4/node-connect-time)
 
 Make HTTP/HTTPS display information on callback after a completed transfer.
 
