@@ -10,6 +10,9 @@
   },
   "author": "taevas <taevas@qq.com> (taevas.space)",
   "license": "MIT",
+  "engines": {
+      "node": ">=4.4.0"
+    },
   "repository": {
     "type": "git",
     "url": "https://github.com/zyvas/node-connect-time.git"
