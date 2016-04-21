@@ -30,7 +30,7 @@ describe('index.js', function() {
         should.notEqual(data.time_starttransfer, 0);
         should.notEqual(data.time_total, 0);
         should.notEqual(data.time_connect, 0);
-        done();
+        return done();
       });
     });
 
@@ -57,7 +57,7 @@ describe('index.js', function() {
     });
 
     it('should return error when unable to determine the domain name', function(done) {
-      request('www.baidu.com', function(err, data) {
+      request('www.baidu.com', function(err) {
         should.exist(err);
         return done();
       });
