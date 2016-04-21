@@ -11,7 +11,7 @@ test: install
 	@NODE_DEV=test mocha
 
 test-cov: install
-	NODE_DEV=test istanbul cover node_modules/mocha/bin/_mocha && rm -rf ./coverage
+	NODE_DEV=test istanbul cover node_modules/mocha/bin/_mocha
 
 lint: install
 	@gulp

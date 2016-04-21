@@ -29,7 +29,8 @@
   "bugs": {
     "url": "https://github.com/zyvas/node-connect-time/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-jscs": "^3.0.2",

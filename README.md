@@ -12,7 +12,7 @@ The variables available are:
 * `time_namelookup` The time, in seconds, it took from the start until the name resolving was completed.
 * `time_appconnect` The time, in seconds, it took from the start until the SSL/SSH/etc connect/handshake to the remote host was completed.
 * `time_connect` The time, in seconds, it took from the start until the TCP connect to the remote host (or proxy) was completed.
-* `time_pretransfer` The time, in seconds, it took from the start until the file transfer was just about to begin. This includes all pre-transfer commands and negotiations that are specific to the particular protocol(s) involved.
+* `time_starttransfer` The time, in seconds, it took from the start until the first byte was just about to be transferred. This includes time_pretransfer and also the time the server needed to calculate the result.
 * `time_total` The total time, in seconds, that the full operation lasted. The time will be displayed with millisecond resolution.
 
 ## Installation
@@ -21,11 +21,9 @@ The variables available are:
 
 ## Usage
 
-### request(options[, safe], cb)
+### request(options, cb)
 
 `options` can be an object or a string. All options from [http](https://nodejs.org/dist/latest-v5.x/docs/api/http.html#http_http_request_options_callback)/[https](https://nodejs.org/dist/latest-v5.x/docs/api/https.html#https_https_request_options_callback) are valid.
-
-`safe` is specified. it is equivalent to selecting HTTPS. default is false.
 
 example:
 
@@ -33,7 +31,7 @@ example:
 // http request
 var q = require('node-connect-time');
 q.request({
-  host: 'weibo.com'
+  hostname: 'www.sina.com.cn'
 }, function(err, data) {
   if (err) return console.log(err);
   console.log(data);
@@ -48,9 +46,7 @@ q.request({
 
 // https request
 var q = require('node-connect-time');
-q.request({
-  host: 'www.baidu.com'
-}, true, function(err, data) {
+q.request('https://www.baidu.com', function(err, data) {
   if (err) return console.log(err);
   console.log(data);
 });
