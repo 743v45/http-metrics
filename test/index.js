@@ -7,7 +7,10 @@ describe('index.js', function() {
     it('should return result when having a HTTP request', function(done) {
       this.timeout(10000);
       request({
-        hostname: 'www.sina.com.cn'
+        hostname: 'www.sina.com.cn',
+        port: 80,
+        'path': '/',
+        method: 'GET'
       }, function(err, data) {
         should.ifError(err);
         should.exist(data);

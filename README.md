@@ -31,7 +31,10 @@ example:
 // http request
 var q = require('node-connect-time');
 q.request({
-  hostname: 'www.sina.com.cn'
+  hostname: 'www.sina.com.cn',
+  port: 80,
+  path: '/',
+  method: 'GET'
 }, function(err, data) {
   if (err) return console.log(err);
   console.log(data);
