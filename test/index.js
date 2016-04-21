@@ -56,11 +56,9 @@ describe('index.js', function() {
       });
     });
 
-    it('should return error when unable to determine the domain name', function(done) {
-      this.timeout(10000);
+    it('should return error when unable to determine the domain name', function() {
       request('www.baidu.com', function(err) {
         should.exist(err);
-        return done();
       });
     });
   });
