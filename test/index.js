@@ -6,7 +6,9 @@ describe('index.js', function() {
   context('request', function() {
     it('should return result when having a HTTP request', function(done) {
       this.timeout(10000);
-      request('http://www.sina.com.cn', function(err, data) {
+      request({
+        hostname: 'www.sina.com.cn'
+      }, function(err, data) {
         should.ifError(err);
         should.exist(data);
         should.equal(data.time_appconnect, 0);
@@ -36,7 +38,7 @@ describe('index.js', function() {
       this.timeout(10000);
       request('https://192.30.252.120', function(err) {
         should.exist(err);
-        done();
+        return done();
       });
     });
 
@@ -50,6 +52,13 @@ describe('index.js', function() {
         should.notEqual(data.time_starttransfer, 0);
         should.notEqual(data.time_total, 0);
         should.notEqual(data.time_connect, 0);
+        return done();
+      });
+    });
+
+    it('should return error when unable to determine the domain name', function(done) {
+      request('www.baidu.com', function(err, data) {
+        should.exist(err);
         return done();
       });
     });
