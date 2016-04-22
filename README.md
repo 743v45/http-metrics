@@ -1,4 +1,4 @@
-# node-connect-time
+# http-metrics
 
 [![Build Status](https://travis-ci.org/zyvas/node-connect-time.svg?branch=develop)](https://travis-ci.org/zyvas/node-connect-time)
 [![Dependency Status](https://david-dm.org/zyvas/node-connect-time.svg)](https://david-dm.org/zyvas/node-connect-time)
@@ -17,7 +17,7 @@ The variables available are:
 
 ## Installation
 
-> $ npm install node-connect-time
+> $ npm install http-metrics
 
 ## Usage
 
@@ -29,7 +29,7 @@ example:
 
 ```javascript
 // http request
-var q = require('node-connect-time');
+var q = require('http-metrics');
 q.request({
   hostname: 'www.sina.com.cn',
   port: 80,
@@ -48,7 +48,7 @@ q.request({
  */
 
 // https request
-var q = require('node-connect-time');
+var q = require('http-metrics');
 q.request('https://www.baidu.com', function(err, data) {
   if (err) return console.log(err);
   console.log(data);
