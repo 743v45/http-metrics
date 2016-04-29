@@ -1,6 +1,6 @@
 {
   "name": "http-metrics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The metrics of the HTTP/HTTPS request process",
   "main": "index.js",
   "scripts": {
